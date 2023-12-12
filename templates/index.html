@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Cybersecurity lab</title>
+    </head>
+
+
+    <body>
+		<h1>Cybersecurity lab</h1>
+
+        <table>
+		<tr>
+		<th style="text-align:left">Welcome, <td><b>{{user.username}} </b>
+		</table>
+
+
+        <form action='logout/' method="POST">
+			{% csrf_token %}
+            <input type="submit" value="Logout"/>
+        </form>
+		
+
+
+</html>
