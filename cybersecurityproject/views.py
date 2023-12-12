@@ -17,3 +17,7 @@ def addView(request):
 	target = User.objects.get(username=request.POST.get('to'))
 	Message.objects.create(source=request.user, target=target, content=request.POST.get('content'))
 	return redirect('/')
+
+def latestView(request, user_id):
+  messages = Message.objects.filter(target=user_id)
+  return render(request, 'latest.html', {'messages': messages})
